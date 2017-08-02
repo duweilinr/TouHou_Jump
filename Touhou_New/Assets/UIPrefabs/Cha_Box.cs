@@ -30,7 +30,7 @@ public class Cha_Box : MonoBehaviour {
 			if (statelist [i] == false) {
 				//interactive.setfalse
 				//blur image
-				Image img = chalist[i].FindChild("Image").GetComponent<Image>();
+				Image img = chalist[i].Find("Image").GetComponent<Image>();
 				img.color = new Color32 (0, 0, 0, 255);
 				Button btn = chalist [i].GetComponent<Button> ();
 				btn.interactable = false;
@@ -38,7 +38,7 @@ public class Cha_Box : MonoBehaviour {
 			if (statelist [i] == true) {
 				//interactive.setrue
 				//bright image
-				Image img = chalist[i].FindChild("Image").GetComponent<Image>();
+				Image img = chalist[i].Find("Image").GetComponent<Image>();
 				img.color = new Color32 (255, 255, 255, 255);
 				Button btn = chalist[i].GetComponent<Button> ();
 				btn.interactable = true;

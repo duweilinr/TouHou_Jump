@@ -1,4 +1,6 @@
-﻿Shader "Hidden/Blur Behind/Blur"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Hidden/Blur Behind/Blur"
 {
 	Properties
 	{
@@ -33,7 +35,7 @@
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 				return o;
 			}
@@ -84,7 +86,7 @@
 			v2f vert(appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv0 = v.uv + _Parameter.xy;
 				o.uv1 = v.uv + _Parameter.xw;
 				o.uv2 = v.uv + _Parameter.zy;
@@ -133,7 +135,7 @@
 			v2f vert(appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = v.uv;
 #if UNITY_UV_STARTS_AT_TOP
 				if (_MainTex_TexelSize.y < 0)

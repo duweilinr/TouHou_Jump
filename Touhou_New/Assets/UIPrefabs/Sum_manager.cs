@@ -66,7 +66,7 @@ public class Sum_manager : MonoBehaviour {
 			clist.Add (chabox.transform.GetChild (i));
 		}
 		for (int i = 0; i < children_count; ++i) {
-			Image img = clist[i].FindChild("Image").GetComponent<Image>();
+			Image img = clist[i].Find("Image").GetComponent<Image>();
 			imglist.Add (img);
 		}
 	}
