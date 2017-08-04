@@ -52,6 +52,7 @@
      <Compile Include="Assets\Blur Behind\Scripts\BlurBehindViewport.cs" />
      <Compile Include="Assets\OneMinuteGui\Scripts\MenuManager.cs" />
      <Compile Include="Assets\UIPrefabs\Btn_Ctrl.cs" />
+     <Compile Include="Assets\UIPrefabs\CameraFollowPlayer.cs" />
      <Compile Include="Assets\UIPrefabs\Cha_Box.cs" />
      <Compile Include="Assets\UIPrefabs\Cha_Container.cs" />
      <Compile Include="Assets\UIPrefabs\Chamanager.cs" />

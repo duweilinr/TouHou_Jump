@@ -3,27 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class bg_move : MonoBehaviour {
+	
 	public Transform player;
 	float playerHeightY;
 	// Use this for initialization
+	private Vector2 velocity;
+	public float smoothTimeY;
+
+
 	void Start(){
 
-		player = GameObject.FindGameObjectWithTag ("Player").transform;
+		player = GameObject.FindGameObjectWithTag ("MainCamera").transform;
 
 		//PlatformSwap (2);
 	}
 	void Update(){
 
-		playerHeightY = player.position.y;
-
-
-
-		float currentCameraHeight = transform.position.y;
-		float newHeightOfCamera = Mathf.Lerp (currentCameraHeight, playerHeightY, Time.deltaTime * 10);
-		if (playerHeightY > currentCameraHeight) {
-
-			transform.position = new Vector3 (transform.position.x, newHeightOfCamera, transform.position.z);
-		}
+		float posY = Mathf.SmoothDamp (transform.position.y, player.position.y, ref velocity.y, smoothTimeY);
+		transform.position = new Vector3 (transform.position.x, posY, transform.position.z);
 
 
 		if (playerHeightY > OnGUI2D.score) {
