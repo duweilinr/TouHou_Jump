@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour {
 		float newHeightOfCamera = Mathf.Lerp (currentCameraHeight, playerHeightY, Time.deltaTime * 10);
 		if (playerHeightY > currentCameraHeight) {
 		
-			transform.position = new Vector3 (transform.position.x, newHeightOfCamera, transform.position.z);
+			transform.position = new Vector3 (transform.position.x, newHeightOfCamera-0.01f, transform.position.z);
 		}
 		else {
 		

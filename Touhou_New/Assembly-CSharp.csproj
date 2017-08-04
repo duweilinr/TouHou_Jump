@@ -71,6 +71,7 @@
      <Compile Include="Assets\UIPrefabs\Sum_manager.cs" />
      <Compile Include="Assets\UIPrefabs\UpDown2D.cs" />
      <Compile Include="Assets\UIPrefabs\Wrap2D.cs" />
+     <Compile Include="Assets\UIPrefabs\bg_move.cs" />
      <Compile Include="Assets\UIPrefabs\oneTimePlant.cs" />
      <None Include="Assets\Blur Behind\Shaders\UI.shader" />
      <None Include="Assets\OneMinuteGui\Font\CarterOne\OFL.txt" />

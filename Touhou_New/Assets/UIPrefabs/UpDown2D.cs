@@ -12,9 +12,9 @@ public class UpDown2D : MonoBehaviour {
 
 	public int unitsToMove = 4;
 	void Start(){
-
-		startPoint = transform.position.y;
-		endPointY = startPoint + unitsToMove;
+		float delta = Random.Range (-0.5f, 0.5f);
+		startPoint = transform.position.y+delta;
+		endPointY = startPoint + unitsToMove+delta;
 	}
 
 	void Update (){
